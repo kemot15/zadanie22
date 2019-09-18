@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista produktow</title>
+</head>
+<body>
+<div th:replace="fragments::myHeader"></div>
+
+
+<ul th:each="product:${products}">
+    <li th:text="|${product.getName()}  ${product.getPrice()}|"></li>
+</ul>
+
+<p th:text="|Suma: ${sum}|"></p>
+
+<div th:replace="fragments::menu"></div>
+
+</body>
+</html>

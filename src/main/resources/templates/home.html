@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkty</title>
+</head>
+<body>
+<div th:replace="fragments::myHeader"></div>
+
+<form th:action="@{/zapisz}" method="post" th:object="${product}">
+    <label for="product">Produkt</label>
+    <input type="text" th:field="*{name}" placeholder="Podaj nazwę produktu" id="product">
+    <label for="price">Cena</label>
+    <input type="text" th:field="*{price}" placeholder="Podaj cenę produktu" id="price">
+    <button type="submit">Zapisz</button>
+</form>
+</body>
+</html>
